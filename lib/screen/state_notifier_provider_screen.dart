@@ -11,7 +11,7 @@ class StateNotifierProviderScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     //변경된 값을 가져올때 List<타겟 타입> state= ref.watch(상태관리 변수)
-    final List<ShoppingItemModel> state = ref.watch(shoppingListProvider)
+    final List<ShoppingItemModel> state = ref.watch(shoppingListProvider);
     //각각의 state별로 포문돌려서 값 출력
     // state.forEach((instance) => print(instance.name));
 
