@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test_riverpod/layout/default_layout.dart';
 import 'package:test_riverpod/screen/family_modifier_screen.dart';
+import 'package:test_riverpod/screen/listen_provider_screen.dart';
+import 'package:test_riverpod/screen/select_provider_screen.dart';
 import 'package:test_riverpod/screen/state_notifier_provider_screen.dart';
 import 'package:test_riverpod/screen/state_provider_screen.dart';
 import 'package:test_riverpod/screen/stream_provider_screen.dart';
@@ -47,13 +49,26 @@ class HomeScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (_) => FamilyModifierScreen()));
               },
               child: Text('FamilyModifierScreen')),
+
           /// autoDispose는 말 그대로 위젯 밖으로 떠나면 데이터를 삭제시켜줌
           ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => AutoDisposeModifierScreen()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => AutoDisposeModifierScreen()));
               },
               child: Text('AutoDisposeModifierScreen')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => ListenProviderScreen()));
+              },
+              child: Text('ListenProviderScreen')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => SelectProviderScreen()));
+              },
+              child: Text('SelectProviderScreen')),
         ],
       ),
     );
