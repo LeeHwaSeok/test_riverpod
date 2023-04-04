@@ -14,10 +14,10 @@ class ShoppingListNotifier extends StateNotifier<List<ShoppingItemModel>> {
       : super([
         //Item형식에 맞춰서 ShoppingList...의 초기값을 생성해주는겁니다 init효과
         // 강사 : StateNotifier에서는 super이하에 타겟 type과 동일한 형태의 데이터의 state를 정의해줘야합니다
-          ShoppingItemModel(name: '김치', hasBought: true, isSpicy: false, quantity: 3),
-          ShoppingItemModel(name: '라면', hasBought: true, isSpicy: false, quantity: 3),
-          ShoppingItemModel(name: '삼겹살', hasBought: false, isSpicy: true, quantity: 13),
-          ShoppingItemModel(name: '카스테라', hasBought: true, isSpicy: true, quantity: 6),
+          ShoppingItemModel(name: '김치', hasBought: true, isSpicy: true, quantity: 3),
+          ShoppingItemModel(name: '라면', hasBought: true, isSpicy: true, quantity: 3),
+          ShoppingItemModel(name: '삼겹살', hasBought: false, isSpicy: false, quantity: 13),
+          ShoppingItemModel(name: '카스테라', hasBought: true, isSpicy: false, quantity: 6),
           ShoppingItemModel(name: '수박', hasBought: false, isSpicy: false, quantity: 8),
           ShoppingItemModel(name: '수작', hasBought: false, isSpicy: false, quantity:2 ),
         ]);
